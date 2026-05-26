@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodgy Artists - Careers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #f0e6dc;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100vw;
+      min-height: 100vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #f8d4a8;
+    }
+
+    header h1 {
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .career-item {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #f8d4a8;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #f8d4a8;
+    }
+
+    .career-item h3 {
+      margin: 10px 0;
+    }
+
+    .career-item p {
+      margin: 10px 0;
+    }
+
+    .career-item button {
+      padding: 10px 20px;
+      background-color: #f8d4a8;
+      color: #5e3a2f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="MicrosoftTeams-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <header>
+    <h1>Careers</h1>
+  </header>
+
+  <div class="content-wrapper">
+    <h2>Join Our Team</h2>
+    <div class="career-item">
+      <h3>Sound Engineer</h3>
+      <p>We are looking for a skilled sound engineer to work with us on exciting music projects.</p>
+      <button>Apply Now</button>
+    </div>
+    <div class="career-item">
+      <h3>Music Producer</h3>
+      <p>Join us as a producer to collaborate with talented artists in the music industry.</p>
+      <button>Apply Now</button>
+    </div>
+  </div>
+</body>
+</html>
+
+

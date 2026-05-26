@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodgy Artists - Resources</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #f0e6dc;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100vw;
+      min-height: 100vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #f8d4a8;
+    }
+
+    header h1 {
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .resource-item {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #f8d4a8;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      width: 30%;
+      color: #f8d4a8;
+    }
+
+    .resource-item a {
+      text-decoration: none;
+      color: #f8d4a8;
+    }
+
+    .resource-item button {
+      padding: 10px 20px;
+      background-color: #f8d4a8;
+      color: #5e3a2f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="MicrosoftTeams-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <header>
+    <h1>Resources</h1>
+  </header>
+
+  <div class="content-wrapper">
+    <h2>Free Guides, Tips, and Tools</h2>
+    <div class="resource-item">
+      <h3>Audio Mixing Tutorial</h3>
+      <p>Learn professional audio mixing techniques to enhance your sound.</p>
+      <a href="#" download>
+        <button>Download Guide</button>
+      </a>
+    </div>
+    <div class="resource-item">
+      <h3>Royalty-Free Samples</h3>
+      <p>Access a collection of high-quality royalty-free audio samples.</p>
+      <a href="#" download>
+        <button>Download Samples</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
+

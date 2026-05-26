@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dodgy Artists</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Background Video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Header Styles */
+        header {
+            position: relative;
+            z-index: 1;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+            color: #f8d4a8; /* Light brown for text */
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f0e6dc; /* Light cream for links */
+            font-size: 1.2em;
+            padding: 5px 10px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #5e3a2f; /* Darker brown on hover */
+            background-color: #f8d4a8; /* Light brown background on hover */
+            border-radius: 5px;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="nav-uniform.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="MicrosoftTeams-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <h1>Dodgy Artists</h1>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Page Content -->
+    <div class="content-wrapper">
+        <h2>About Dodgy Artists</h2>
+        <p>Dodgy Artists is a pioneering music production company, dedicated to crafting unique and innovative sounds that resonate with today's music landscape.</p>
+        <h3>Our Mission</h3>
+        <p>Our mission is to push the boundaries of traditional music production by combining cutting-edge technology with raw artistic talent.</p>
+    </div>
+</body>
+</html>
+
+
+
+
+

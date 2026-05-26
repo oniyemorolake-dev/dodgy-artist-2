@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodgy Artists - Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav-uniform.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #f0e6dc;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100vw;
+      min-height: 100vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #f8d4a8;
+    }
+
+    header h1 {
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .shop-item {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #f8d4a8;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      width: 30%;
+      color: #f8d4a8;
+    }
+
+    .shop-item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .shop-item h3 {
+      margin: 10px 0;
+    }
+
+    .shop-item p {
+      margin: 10px 0;
+    }
+
+    .shop-item button {
+      padding: 10px 20px;
+      background-color: #f8d4a8;
+      color: #5e3a2f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .sale-banner {
+      margin: 20px auto 10px;
+      max-width: 520px;
+      background-color: rgba(210, 180, 140, 0.88);
+      color: #4b3832;
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .sale-banner .countdown {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .sale-banner .message {
+      margin: 6px 0 0;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .shop-item {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .shop-item {
+        width: 92%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="MicrosoftTeams-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <header>
+    <h1>Shop</h1>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <h2>Buy Merchandise, Beats, and Licenses</h2>
+    <div class="sale-banner">
+      <p class="countdown" id="countdown">Loading...</p>
+      <p class="message" id="message"></p>
+    </div>
+    <div class="shop-item">
+      <img src="https://picsum.photos/seed/merch1/700/500" alt="Merchandise">
+      <h3>Dodgy Artists Hoodie</h3>
+      <p>GBP 40.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="shop-item">
+      <img src="https://picsum.photos/seed/beat1/700/500" alt="Beat">
+      <h3>Premium Sound Pack</h3>
+      <p>GBP 25.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="shop-item">
+      <img src="https://picsum.photos/seed/license1/700/500" alt="License">
+      <h3>Music Track License</h3>
+      <p>GBP 100.00</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    const saleEndDate = new Date("2026-12-31T23:59:59").getTime();
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = saleEndDate - now;
+
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s remaining!`;
+      } else {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").textContent = "Sale has ended!";
+        document.getElementById("message").textContent = "Thank you for shopping with us. Stay tuned for the next sale!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+
+
+
