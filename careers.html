@@ -82,6 +82,49 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    .career-item .apply-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f8d4a8;
+      color: #5e3a2f;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .career-item .apply-link:hover,
+    .career-item .apply-link:focus-visible {
+      background-color: #ffd9b6;
+    }
+
+    .site-footer {
+      position: relative;
+      z-index: 1;
+      padding: 24px 16px 32px;
+      text-align: center;
+      color: #f8d4a8;
+    }
+
+    .site-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .site-footer a {
+      color: #f0e6dc;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover,
+    .site-footer a:focus-visible {
+      color: #f8d4a8;
+    }
   </style>
 </head>
 <body>
@@ -116,14 +159,24 @@
     <div class="career-item">
       <h3>Sound Engineer</h3>
       <p>We are looking for a skilled sound engineer to work with us on exciting music projects.</p>
-      <button>Apply Now</button>
+      <a class="apply-link" href="contact.html">Apply Now</a>
     </div>
     <div class="career-item">
       <h3>Music Producer</h3>
       <p>Join us as a producer to collaborate with talented artists in the music industry.</p>
-      <button>Apply Now</button>
+      <a class="apply-link" href="contact.html">Apply Now</a>
     </div>
   </div>
+
+  <footer class="site-footer">
+    <p>Follow Dodgy Artists</p>
+    <ul>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+      <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      <li><a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
 

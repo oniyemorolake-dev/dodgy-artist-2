@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dodgy Artists - Events</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav-uniform.css">
   <style>
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
+      min-height: 100%;
       font-family: 'Poppins', sans-serif;
       color: #f0e6dc;
+      overflow-x: hidden;
     }
 
     .video-background {
@@ -51,8 +53,15 @@
     .content-wrapper {
       position: relative;
       z-index: 1;
+      max-width: 960px;
+      margin: 0 auto;
       padding: 20px;
       text-align: center;
+    }
+
+    .content-wrapper h2 {
+      color: #f8d4a8;
+      margin-top: 14px;
     }
 
     .event-item {
@@ -64,12 +73,29 @@
       color: #f8d4a8;
     }
 
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
     .event-item h3 {
       margin: 10px 0;
     }
 
     .event-item p {
       margin: 10px 0;
+    }
+
+    @media (max-width: 720px) {
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .event-item {
+        margin: 0;
+      }
     }
   </style>
 </head>
@@ -83,17 +109,34 @@
 
   <header>
     <h1>Events</h1>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a class="active" href="events.html">Events</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="content-wrapper">
     <h2>Upcoming Events</h2>
-    <div class="event-item">
-      <h3>Live Production Workshop</h3>
-      <p>Join us for an interactive workshop where you can learn music production techniques.</p>
-    </div>
-    <div class="event-item">
-      <h3>Album Release Party</h3>
-      <p>Celebrate the launch of our latest album with a live performance and special guests!</p>
+    <div class="events-grid">
+      <div class="event-item">
+        <h3>Live Production Workshop</h3>
+        <p>Join us for an interactive workshop where you can learn music production techniques.</p>
+      </div>
+      <div class="event-item">
+        <h3>Album Release Party</h3>
+        <p>Celebrate the launch of our latest album with a live performance and special guests!</p>
+      </div>
     </div>
   </div>
 </body>
