@@ -5,12 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dodgy Artists - Terms of Use</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav-uniform.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #f0e6dc;
+      overflow-x: hidden;
+    }
+
+    .video-background {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100vw;
+      min-height: 100vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #f8d4a8;
+    }
+
+    header h1 {
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 12px;
+    }
+  </style>
 </head>
 <body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="MicrosoftTeams-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <header>
     <h1>Terms of Use</h1>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a class="active" href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
+  <main class="content-wrapper">
     <section>
       <p>Use this page to publish your official terms and conditions.</p>
     </section>

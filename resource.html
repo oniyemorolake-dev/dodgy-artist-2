@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dodgy Artists - Resources</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav-uniform.css">
   <style>
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
+      min-height: 100%;
       font-family: 'Poppins', sans-serif;
       color: #f0e6dc;
+      overflow-x: hidden;
     }
 
     .video-background {
@@ -51,8 +53,15 @@
     .content-wrapper {
       position: relative;
       z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
       padding: 20px;
       text-align: center;
+    }
+
+    .content-wrapper h2 {
+      margin-top: 14px;
+      color: #f8d4a8;
     }
 
     .resource-item {
@@ -64,6 +73,13 @@
       display: inline-block;
       width: 30%;
       color: #f8d4a8;
+    }
+
+    .resource-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .resource-item a {
@@ -79,6 +95,47 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    .site-footer {
+      position: relative;
+      z-index: 1;
+      padding: 20px 16px 32px;
+      text-align: center;
+      color: #f8d4a8;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid rgba(248, 212, 168, 0.45);
+      border-radius: 999px;
+      color: #f8e6d4;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .social-links a:hover,
+    .social-links a:focus-visible {
+      background: #f8d4a8;
+      color: #5e3a2f;
+    }
+
+    @media (max-width: 720px) {
+      .resource-item {
+        width: min(100%, 360px);
+        margin: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -91,25 +148,52 @@
 
   <header>
     <h1>Resources</h1>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a class="active" href="resource.html">Resources</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="content-wrapper">
     <h2>Free Guides, Tips, and Tools</h2>
-    <div class="resource-item">
-      <h3>Audio Mixing Tutorial</h3>
-      <p>Learn professional audio mixing techniques to enhance your sound.</p>
-      <a href="#" download>
-        <button>Download Guide</button>
-      </a>
-    </div>
-    <div class="resource-item">
-      <h3>Royalty-Free Samples</h3>
-      <p>Access a collection of high-quality royalty-free audio samples.</p>
-      <a href="#" download>
-        <button>Download Samples</button>
-      </a>
+    <div class="resource-grid">
+      <div class="resource-item">
+        <h3>Audio Mixing Tutorial</h3>
+        <p>Learn professional audio mixing techniques to enhance your sound.</p>
+        <a href="#" download>
+          <button>Download Guide</button>
+        </a>
+      </div>
+      <div class="resource-item">
+        <h3>Royalty-Free Samples</h3>
+        <p>Access a collection of high-quality royalty-free audio samples.</p>
+        <a href="#" download>
+          <button>Download Samples</button>
+        </a>
+      </div>
     </div>
   </div>
+
+  <footer class="site-footer">
+    <p>Follow Dodgy Artists</p>
+    <ul class="social-links">
+      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+      <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      <li><a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
 
